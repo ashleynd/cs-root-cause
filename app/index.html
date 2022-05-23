@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Todo List application</title>
+    <style>
+        body {
+            background-color:  powderblue;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Times New Roman',sans-serif;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 0;
+            list-style-position: inside;
+        }
+    </style>
+    <script type="module" src="script.js">
+    </script>
+</head>
+<body>
+
+<h1>Todo</h1>
+<p> The field below can be edited. These edits will be saved to the database </p>
+
+<h2> List of todo items: </h2>
+<div>
+    <ul id="todoList">
+        {{ range .CheckBoxItems}}
+        <li value="{{ .ID }}" >{{.Description}}</li>
+        {{end}}
+    </ul>
+</div>
+<div>
+    <form action="/update" method="post" id="newTodoForm">
+        <label for="description"> New todo: </label>
+        <input id ="description" name="description" value="Get Milk" type="text">
+        <input type="submit" value="Update todo"  >
+    </form>
+</div>
+
+</body>
+</html>
