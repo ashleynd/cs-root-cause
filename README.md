@@ -9,7 +9,7 @@ Prior to sending them the directory, ensure they have [Docker](https://docs.dock
 (__Note:__ This is a separate binary, not `docker compose` that is bundled with the Docker for Desktop installation ) .
 
 
-#### CANDIDATE SUBMISSION:
+## CANDIDATE SUBMISSION:
 
 To start, I did attempt to install and use Docker, but this is the first time I've touched Docker, so I was a little confused how to use it.
 
